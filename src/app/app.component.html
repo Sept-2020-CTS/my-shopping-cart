@@ -5,8 +5,13 @@
 <button (click)="updateUser()">Hello</button>
 <hr>
 
-<app-products (sourceProductAdd)="pushNewProduct($event)"></app-products>
+<app-products (sourceProductAdd)="pushNewProduct($event)">
+  <app-content></app-content>
+</app-products>
 
 <hr>
 
-<app-cart *ngFor="let prod of productsForToday" [passedOnProduct]="prod"></app-cart>
+<app-cart *ngFor="let prod of productsForToday" [passedOnProduct]="prod">
+  <app-content></app-content>
+</app-cart>
+
